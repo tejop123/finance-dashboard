@@ -130,10 +130,14 @@
 
 .overview {
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  justify-items: center;
+  align-items: stretch;
 }
 
 .summary {
   grid-column: span 3;
+  width: 100%;
+  max-width: 320px;
 }
 
 .trend {
@@ -514,10 +518,12 @@ button:focus-visible {
 @media (max-width: 1100px) {
   .overview {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-items: center;
   }
 
   .summary {
     grid-column: span 3;
+    max-width: 360px;
   }
 
   .trend,
@@ -552,6 +558,7 @@ button:focus-visible {
   .trend,
   .breakdown {
     grid-column: span 6;
+    max-width: 100%;
   }
 
   .table-row {
