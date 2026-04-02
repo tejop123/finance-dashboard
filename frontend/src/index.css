@@ -1,0 +1,92 @@
+:root {
+  --text: #1f2430;
+  --muted: #6b7280;
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --pill-bg: #f3f4f6;
+  --row: #f9fafb;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --text: #f9fafb;
+  --muted: #a3aab6;
+  --bg: #0f1117;
+  --surface: #151824;
+  --border: #242a3a;
+  --pill-bg: #1e2433;
+  --row: #121621;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+      900px circle at 12% 10%,
+      rgba(124, 92, 255, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      700px circle at 85% 8%,
+      rgba(46, 211, 183, 0.22),
+      transparent 40%
+    ),
+    radial-gradient(
+      600px circle at 30% 85%,
+      rgba(255, 184, 77, 0.15),
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(15, 23, 42, 0.05) 1px,
+      transparent 0
+    );
+  background-size: 24px 24px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: var(--text);
+}
+
+p {
+  color: var(--muted);
+}
