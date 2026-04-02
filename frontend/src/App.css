@@ -134,11 +134,12 @@
 }
 
 .summary {
-  grid-column: span 3;
+  grid-column: span 4;
   position: relative;
   overflow: hidden;
   padding: 24px 24px 22px;
   min-height: 160px;
+  width: 100%;
 }
 
 .trend {
