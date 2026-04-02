@@ -149,6 +149,43 @@
   grid-column: span 5;
 }
 
+.trend,
+.breakdown,
+.insight {
+  position: relative;
+  overflow: hidden;
+}
+
+.trend::after {
+  content: '';
+  position: absolute;
+  inset: auto -30% -40% auto;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.18), transparent 65%);
+  pointer-events: none;
+}
+
+.breakdown::after {
+  content: '';
+  position: absolute;
+  inset: -40% auto auto -30%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(46, 211, 183, 0.18), transparent 65%);
+  pointer-events: none;
+}
+
+.insight::after {
+  content: '';
+  position: absolute;
+  inset: auto -35% -45% auto;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 184, 77, 0.2), transparent 65%);
+  pointer-events: none;
+}
+
 .transactions .full {
   grid-column: span 12;
 }
